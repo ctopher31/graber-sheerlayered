@@ -1,0 +1,51 @@
+{
+  "name": "g3dlayered",
+  "version": "1.1.0",
+  "description": "Graber 3D Layered Shades Digital Sample Book App",
+  "main": "index.js",
+  "scripts": {
+    "start": "test gulp",
+    "test": "mocha --compilers js:babel-core/register ./tests/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "Graber",
+    "3D",
+    "Layered",
+    "Shades"
+  ],
+  "author": "Christopher Arritt",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "socket.io": "^1.4.5",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "cordova": "^8.0.0",
+    "cordova-android": "^7.0.0",
+    "cordova-ios": "^4.5.5",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "1",
+    "fastclick": "^1.0.6"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {}
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html lang="en">
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="viewport-fit=cover, initial-scale=1, maximum-scale=1.5, minimum-scale=1, width=device-width">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src *; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="description" content="Product Catalog section of Graber Blinds - Sheer and Layered Shades Sample Book.">
+        <title>Collections - Sheer and Layered Shades Sample Book | Graber Blinds | Middleton, WI</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/collections.css">
+    </head>
+    <body id="collections">
+        <div class="app">
+            <div class="navbar">
+                <ul class="navbar-list list-inline">
+                    <li class="navbar-list-item nav-left logo"><img class="icon logo-icon" src="assets/images/icons/graber.svg" alt="Graber Logo"></li>
+                    <li class="navbar-list-item title collections-title" href="index.html">Collections</li>
+                    <li class="navbar-list-item nav-right menu">
+                        <a class="nav-link modal-close" href="#" title="Modal Close"><img class="close-button" src="assets/images/icons/close.png" alt="Close"></a>
+                        <a class="nav-link collections-menu" href="#" title="Pop Out Menu"><!--<img class="svg-icon menu-svg" src="assets/images/icons/menu.svg" alt="Menu">-->Sort<br><img class="svg-icon arrow-icon" src="assets/images/icons/down-arrow.svg" alt="Arrow icons for dropdown nav"></a>
+                    </li>
+                </ul>
+            </div>
+            <section class="content collections">
+                <section class="modal-section">
+                    <div class="modal-inner-section scrolling-section">
+                        <div class="modal-container">
+                            <div class="swatch-container">
+                                <img id="swatch" src="#" alt="Inspired Drapes">
+                            </div>
+                            <div class="swatch-description">
+                                <ul class="modal-list list-inline">
+                                    <li class="clearfix"><span class="modal-label">Product Line:</span><span class="modal-item product-line"></span></li>
+                                    <li class="clearfix"><span class="modal-label">Collection:</span><span class="modal-item collection-name"></span></li>
+                                    <li class="clearfix"><span class="modal-label">Color Name:</span><span class="modal-item color-name"></span></li>
+                                    <li class="clearfix"><span class="modal-label">Color Number:</span><span class="modal-item color-number"></span></li>
+                                    <li class="clearfix"><span class="modal-label">Light Control:</span><span class="modal-item light-control"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="filter-section">
+                    <div class="filter product-filter">
+                        <p>&#8213; Product Line &#8213;</p>
+                        <ul id="product-filter-list" class="product-filter-list list-inline" data-option-key="product-line">
+                            <li class="filter-item"><a class="nav-link selected" href="#" data-option-value="all">All</a></li>
+                            <li class="filter-item"><a class="nav-link" href="#" data-option-value="Sheer Shades">Sheer</a></li>
+                            <li class="filter-item"><a class="nav-link" href="#" data-option-value="Layered Shades">Layered</a></li>
+                        </ul>
+                    </div>
+                    <div class="filter light-filter">
+                        <p>&#8213; Light Control &#8213;</p>
+                        <ul id="light-filter-list" class="light-filter-list list-inline" data-option-key="light-control">
+                            <li class="filter-item"><a class="nav-link selected" href="#" data-option-value="all">All</a></li>
+                            <li class="filter-item"><a class="nav-link" href="#" data-option-value="Sheer">Sheer</a></li>
+                            <li class="filter-item"><a class="nav-link" href="#" data-option-value="Light Filtering">Light Filtering</a></li>
+                            <li class="filter-item"><a class="nav-link" href="#" data-option-value="Room Darkening">Room Darkening</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="inner-content scrolling-container">
+                    <div class="info-section image-section">
+                        <article class="info-container image-gallery">
+                            <div class="info-heading-container">
+                                <h2>Swatch Collections</h2>
+                            </div>
+                            <div id="swatch-gallery" class="swatch-section">
+                                <div class="swatch-thumbs-container" data-product-deck="all" data-light-deck="all">
+                                    <div class="swatch-thumbs"></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </section>
+            <div class="tabbar">
+                <ul class="tabbar-list list-inline">
+                    <li class="tabbar-list-item"><a class="nav-link text-center" href="index.html"><img class="svg-icon home-svg" src="assets/images/icons/home.svg" alt="Home"><br>Home</a></li>
+                    <li class="tabbar-list-item"><a class="nav-link text-center" href="product-catalog.html"><img class="svg-icon catalog-svg" src="assets/images/icons/catalog.svg" alt="Product Catalog"><br>Catalog</a></li>
+                    <li class="tabbar-list-item"><a class="nav-link text-center" href="collections.html"><img class="svg-icon collections-svg" src="assets/images/icons/collections.svg" alt="Collections"><br>Collections</a></li>
+                    <li class="tabbar-list-item"><a class="nav-link text-center" href="media.html"><img class="svg-icon media-svg" src="assets/images/icons/media.svg" alt="Media Library"><br>Media</a></li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/fastclick.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/hammer.min.js"></script>
+        <script type="text/javascript" src="js/sheer-layered.js"></script>
+        <script type="text/javascript" src="js/swatchfilter.js"></script>
+    </body>
+</html>

@@ -1,0 +1,355 @@
+.filter-section {
+    position: absolute;
+    height: 0;
+    background: rgba(121,110,101,.95);
+    width: 100%;
+    padding-top: 0;
+    z-index: 10;
+    transition: height .5s, padding-top .5s;
+    overflow: hidden;
+}
+.collections-filter-section {
+    height: 140px;
+    padding-top: 8px;
+}
+.media-filter-section {
+    height: 75px;
+    padding-top: 8px;
+}
+.inner-content {
+    padding-left: 0;
+    padding-right: 0;
+}
+.filter p {
+    text-align: center;
+    margin: 0 auto;
+    color: #FFFFFF;
+}
+.product-filter ul {
+    width: 100%;
+    text-align: center;
+}
+.product-filter li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.light-filter ul {
+    width: 100%;
+    text-align: center;
+}
+.light-filter li {
+    display: inline-block;
+    margin: 0 2px;
+}
+.media-filter ul {
+    width: 100%;
+    text-align: center;
+}
+.media-filter li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.filter-item a {
+    color: #FFFFFF;
+    display: block;
+    padding: 3px 5px;
+}
+.light-filter .filter-item a {
+    padding: 3px 1px;
+}
+.filter-item a:active {
+    opacity: .7;
+}
+.filter-item .selected {
+    color: #732e4a;
+}
+.swatch-thumbs {
+    text-align: center;
+}
+.swatch-link {
+    color: #666666;
+    width: 90px;
+    height: 90px;
+    margin: 8px 8px 90px 8px;
+    display: inline-block;
+    vertical-align: top;
+}
+.swatch-link:active {
+    opacity: 0.7;
+}
+.swatch-link img {
+    width: 100%;
+    height: 100%;
+    background: #666;
+}
+
+.grid {
+    text-align: center;
+}
+.grid-item {
+    background: #666;
+    position: relative;
+    color: #666666;
+    width: 100%;
+    height: 0;
+    margin: 18px 0;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    padding-bottom: 60%;
+}
+.grid-item:active {
+    opacity: 0.7;
+}
+.grid-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 150%;
+    margin-top: -10%;
+    margin-left: -10%;
+}
+.grid-item .narrow-item {
+    height: auto;
+    width: 100%;
+    margin: 0;
+}
+.video-grid {
+    margin: 53px auto;
+}
+.video-grid-item {
+    position: relative;
+    vertical-align: top;
+    margin-bottom: 40px;
+}
+.video-container {
+    background: #212121;
+    position: relative;
+    color: #fff;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+}
+.video-grid-item .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.ios video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+.android .play-button-container {
+    display: none;
+}
+.play-button {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+}
+.play-button-container {
+    background: rgba(121, 110, 101, 0.8);
+    border-radius: 100%;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    left: 50%;
+    margin-left: -25px;
+    z-index: 9;
+}
+#lightbox .lb-data .lb-caption, #lightbox .lb-data .lb-number {
+    line-height: 1.4em;
+}
+/* Modal =============================================== */
+.close-button {
+    visibility: hidden;
+    margin-top: 1px;
+}
+.modal-section {
+    background: rgba(0, 0, 0, 0.8) url(../assets/images/overlay.png) repeat scroll 0 0;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    display: none;
+    transition: height 2s;
+}
+.modal-inner-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0 30px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* lets it scroll lazy */
+}
+.modal-container {
+    padding: 5px;
+    border: 5px solid #796e65;
+    box-shadow: 0 0 5px #000000;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 2px;
+    background: #FFFFFF;
+    z-index: 999;
+}
+.swatch-container {
+    height: 280px;
+    width: 280px;
+    padding: 0;
+    margin: 0;
+}
+.swatch-container img {
+    height: 280px;
+    width: 280px;
+}
+.swatch-description {
+    margin: 40px 0 20px;
+    padding: 0;
+    text-align: center;
+}
+.swatch-description li {
+    font-size: 16px;
+    display: block;
+    text-align: left;
+}
+.swatch-description .modal-label {
+    width: 120px;
+    display: inline-block;
+    vertical-align: top;
+}
+.swatch-description .modal-item {
+    width: calc(100% - 120px);
+    display: inline-block;
+    vertical-align: top;
+}
+/* Modal =============================================== */
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media (min-width: 360px) {
+    .light-filter .filter-item a {
+        padding: 3px 5px;
+    }
+    .swatch-link {
+        width: 100px;
+        height: 100px;
+    }
+    .modal-container {
+        padding: 15px;
+        border: 5px solid #796e65;
+        box-shadow: 0 0 5px #000000;
+        width: 340px;
+        margin: 0 auto;
+        border-radius: 2px;
+        background: #FFFFFF;
+        z-index: 999;
+    }
+    .swatch-container {
+        height: 300px;
+        width: 300px;
+        padding: 0;
+        margin: 0;
+    }
+    .swatch-container img {
+        height: 300px;
+        width: 300px;
+    }
+}
+@media (min-width: 400px) and (min-height: 640px) {
+    .light-filter .filter-item a {
+        padding: 3px 8px;
+    }
+    .swatch-link {
+        width: 120px;
+        height: 120px;
+    }
+}
+@media (min-width: 600px) {
+    .swatch-link {
+        width: 130px;
+        height: 130px;
+    }
+    .grid {
+        text-align: center;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .grid-item {
+        width: calc(50% - 32px);
+        padding-bottom:25%;
+        margin: 15px;
+    }
+    .video-grid {
+        text-align: center;
+        margin: 30px auto;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .video-grid-item {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(50% - 32px);
+        margin: 15px;
+    }
+}
+
+/* Small devices (tablets, 768px and up) @screen-sm-min */
+@media (min-width: 768px) and (min-height: 640px) {
+    .swatch-link {
+        width: 170px;
+        height: 170px;
+        margin: 11px 11px 60px 11px;
+    }
+    .modal-container {
+        width: 640px;
+    }
+    .swatch-container {
+        height: 600px;
+        width: 600px;
+        padding: 0;
+        margin: 0;
+    }
+    .swatch-container img {
+        height: 600px;
+        width: 600px;
+    }
+    .swatch-description .modal-list {
+        display: inline-block;
+        width: 280px;
+    }
+    .swatch-description .modal-label {
+        width: 140px;
+    }
+    .swatch-description .modal-item {
+        width: calc(100% - 140px);
+    }
+}
+
+/* Medium devices (desktops, 992px and up) @screen-md-min */
+@media (min-width: 992px) {
+    .grid-item {
+        width: calc(33.3333% - 32px);
+        padding-bottom:25%;
+        margin: 15px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) @screen-lg-min */
+@media (min-width: 1200px) {
+    .grid-item {
+        padding-bottom:20%;
+    }
+}

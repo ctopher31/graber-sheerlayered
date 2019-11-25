@@ -1,0 +1,6 @@
+g3dlayered.sublime-project
+g3dlayered.sublime-workspace
+/platforms
+.DS_Store
+.idea
+/node_modules

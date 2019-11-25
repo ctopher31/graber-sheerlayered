@@ -1,0 +1,605 @@
+/* Graber Sheer and Layered Shades Sample Book App ===== */
+/* Normalize =========================================== */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}template,[hidden]{display:none}a{background-color:transparent}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,select,textarea{font:inherit}optgroup{font-weight:bold}button,input,select{overflow:visible}button,input,select,textarea{margin:0}button,select{text-transform:none}button,[type="button"],[type="reset"],[type="submit"]{cursor:pointer}[disabled]{cursor:default}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}button:-moz-focusring,input:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+/* Normalize =========================================== */
+/* Base Styles ========================================= */
+@font-face {
+    font-family: "Chalet LondonNineteenSixty";
+    src: url("../assets/fonts/ChaletLondonNineteenSixty.otf");
+}
+@font-face {
+    font-family: "Chalet NewYorkNineteenSixty";
+    src: url("../assets/fonts/ChaletLondonNineteenSixty.otf");
+}
+@font-face {
+    font-family: "Chalet ParisNineteenEighty";
+    src: url("../assets/fonts/ChaletLondonNineteenSixty.otf");
+}
+@font-face {
+    font-family: "Garogier";
+    src: url("../assets/fonts/Garogier.otf");
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    background: #FFFFFF;
+    color: #666666;
+    font-size: 62.5%;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.app {
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 33px;
+    font-family: "Garogier", Helvetica, sans-serif;
+    font-weight: 100;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 21px;
+    font-family: "Chalet ParisNineteenEighty", Helvetica, sans-serif;
+    font-weight: 100;
+}
+h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: "Chalet ParisNineteenEighty", Helvetica, sans-serif;
+    font-weight: 100;
+}
+h4 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "Chalet ParisNineteenEighty", Helvetica, sans-serif;
+    font-weight: 100;
+}
+h5 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "Chalet ParisNineteenEighty", Helvetica, sans-serif;
+    font-weight: 100;
+}
+h6 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "Chalet ParisNineteenEighty", Helvetica, sans-serif;
+    font-weight: 100;
+}
+ul {
+    padding-left: 16px;
+    list-style: square;
+}
+p, a, li {
+    font-family: "Chalet LondonNineteenSixty", Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7em;
+}
+a {
+    text-decoration: none;
+}
+.nav-link:active {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.0);
+    background: rgba(0, 0, 0, 0.2);
+}
+.list-unstyled {
+    list-style: none;
+}
+.list-inline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.app .garogier {
+    font-family: "Garogier", Helvetica, sans-serif;
+}
+.app .g3dpurple-text {
+    color: #732e4a;
+}
+.text-center {
+    text-align: center;
+}
+/* Base Styles ========================================= */
+/* Clearfix ============================================ */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
+}
+/* Clearfix ============================================ */
+/* Navbar ============================================== */
+.navbar {
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background: #31221e;
+    color: #FFFFFF;
+    height: 49px;
+    z-index: 999;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+.app.ios .navbar {
+    padding-top: 20px;
+    height: 69px;
+}
+.app.android .statusbar {
+    height: 25px;
+    width: 100%;
+    background: #000000;
+}
+.navbar-list {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+.navbar-list-item {
+    -webkit-flex: 1;
+    flex: 1;
+    color: #fff;
+    font-size: 15px;
+    font-family: "Chalet LondonNineteenSixty";
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+}
+.navbar-list-item.nav-left {
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: left;
+}
+.navbar-list-item.nav-right {
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: right;
+}
+.navbar-list-item.title {
+    -webkit-flex: 3;
+    flex: 3;
+    text-align: center;
+    padding-top: 12px;
+}
+.navbar-list-item a {
+    color: #fff;
+    font-size: 15px;
+    font-family: "Chalet LondonNineteenSixty";
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    display: inline-block;
+    vertical-align: top;
+    width: 43px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    line-height: 35px;
+    text-align: center;
+    position: relative;
+    height: 49px;
+}
+.navbar-list-item a:active .svg-icon {
+    opacity: .7;
+}
+.navbar-list-item.nav-left.logo {
+    padding-top: 13px;
+}
+.navbar-list-item.nav-left .logo-icon {
+    display: none;
+}
+.navbar-list-item.nav-left .left-arrow {
+    height: 21px;
+    position: relative;
+    top: 5px;
+    padding-right: 15px;
+}
+.navbar-list-item.nav-right .right-arrow {
+    height: 21px;
+    position: relative;
+    top: 5px;
+    padding-left: 15px;
+}
+.navbar-list-item.nav-right .collections-menu, .navbar-list-item.nav-right .media-menu {
+    line-height: 1.4em;
+    padding-top: 5px;
+}
+.navbar-list-item.nav-right .arrow-icon {
+    height: 13px;
+}
+/* Navbar ============================================== */
+/* Tab Bar ============================================= */
+.tabbar {
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background: #796e65;
+    color: #FFFFFF;
+    height: 48px;
+    width: 100%;
+    z-index: 999;
+}
+.tabbar-list {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    /*-webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;*/
+    height: 100%;
+    overflow: hidden;
+}
+.tabbar-list-item {
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: center;
+}
+.tabbar-list-item a  {
+    display: inline-block;
+    height: 48px;
+    width: 62px;
+    padding-top: 7px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+}
+.tabbar .nav-link {
+    opacity: 0.9;
+}
+.tabbar-list-item img {
+    height: 21px;
+
+}
+.svg-icon {
+    height: 21px;
+}
+/* Tab Bar ============================================= */
+/* Content Structure =================================== */
+.content {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+.inner-content {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    position: relative;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    padding: 15px 0 15px;
+    -webkit-overflow-scrolling: touch; /* lets it scroll lazy */
+}
+/* Content ============================================= */
+/* Action Component ==================================== */
+.action-section {
+
+}
+.action-container {
+    text-align: center;
+    background: #FFFFFF;
+    width: 260px;
+    padding: 15px;
+    position: relative;
+    z-index: 9;
+}
+.action-heading-container {
+    margin: 15px 0;
+}
+.action-heading-container h1 {
+    color: #392e2c;
+    letter-spacing: 7px;
+    line-height: 36px;
+    margin: 0 0 21px;
+}
+.action-subhead {
+    color: #732e4a;
+    font-family: "Chalet ParisNineteenEighty";
+    font-size: 18px;
+    text-transform: uppercase;
+    border-top: 1px solid #732e4a;
+    border-bottom: 1px solid #732e4a;
+    padding: 10px 10px 8px;
+}
+.action-container p {
+    font-family: "Garogier", Helvetica, sans-serif;
+    font-size: 18px;
+}
+.vertical-bar {
+    position: absolute;
+    z-index: 7;
+    top: 0;
+    left: 45%;
+    width: 5px;
+    height: 100%;
+    background: #FFFFFF;
+}
+.horizontal-bar {
+    position: absolute;
+    z-index: 7;
+    top: 50%;
+    left: 0;
+    width: 50%;
+    height: 5px;
+    background: #FFFFFF;
+}
+/* Action Component ==================================== */
+/* Info Component ====================================== */
+.info-container {
+    background: #FFFFFF;
+    padding: 30px;
+    position: relative;
+    z-index: 9;
+}
+.info-heading-container {
+    margin: 10px 0 35px;
+    text-align: center;
+}
+.info-heading-container h2 {
+    display: inline-block;
+    color: #732e4a;
+    font-family: "Chalet ParisNineteenEighty";
+    font-size: 18px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    border-top: 1px solid #732e4a;
+    border-bottom: 1px solid #732e4a;
+    padding: 15px 15px 12px;
+}
+/* Info Component ====================================== */
+/* Home ================================================ */
+.navbar-list-item.title.home-title {
+    -webkit-flex: 8;
+    flex: 8;
+    text-align: center;
+}
+.home {
+    background: url(../assets/images/detail-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.home .inner-content {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 9;
+}
+.home .action-section {
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    position: relative;
+    z-index: 11;
+}
+.home .vertical-bar {
+    position: absolute;
+    z-index: 7;
+}
+.home .horizontal-bar {
+    position: absolute;
+    z-index: 7;
+}
+/* Home ================================================ */
+/* Product Catalog ===================================== */
+.pc-1 {
+    background: #732e4a;
+}
+.pc-1 .inner-content {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+.pc-1 .catalog-nav-section {
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    position: relative;
+    z-index: 9;
+    width: 300px;
+}
+.pc-1 h1 {
+    color: #FFFFFF;
+    letter-spacing: 7px;
+    font-size: 48px;
+    text-align: left;
+}
+.pc-1 .catalog-nav {
+    padding-left: 0;
+    text-align: left;
+    margin-top: 60px;
+}
+.pc-1 .catalog-nav li {
+    border-top: 1px solid #FFFFFF;
+}
+.pc-1 .catalog-nav li:last-child {
+    border-bottom: 1px solid #FFFFFF;
+}
+.pc-1 .catalog-nav .nav-link {
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: left;
+    font-family: "Chalet LondonNineteenSixty";
+    letter-spacing: 2px;
+    font-weight: 200;
+    text-transform: uppercase;
+    padding: 10px 0;
+    display: block;
+}
+.pc-1 .right-arrow {
+    height: 21px;
+    float: right;
+}
+.small-screen-hide {
+    display: none;
+}
+/* Product Catalog ===================================== */
+/* Collections ========================================= */
+.navbar-list-item.title.collections-title {
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: center;
+}
+.collections {
+    background: #FFFFFF;
+}
+.collections .inner-content article {
+    padding: 30px 0;
+}
+/* Collections ========================================= */
+/* Media =============================================== */
+.navbar-list-item.title.media-title {
+    -webkit-flex: 2;
+    flex: 2;
+    text-align: center;
+}
+.media {
+    background: #FFFFFF;
+}
+/* Media =============================================== */
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media (min-width: 360px) {
+    .home .inner-content {
+        padding: 20px 0 20px;
+    }
+    .home .action-container {
+        width: 290px;
+        padding: 30px 20px;
+    }
+    .pc-1 .catalog-nav-section {
+        width: 340px;
+    }
+}
+@media (min-width: 400px) and (min-height: 640px) {
+    .home .inner-content {
+        padding: 30px 0 30px;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+    .home .action-container {
+        width: 320px;
+        padding: 30px 20px;
+    }
+    .pc-1 .catalog-nav-section {
+        width: 380px;
+    }
+}
+@media (min-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+    .navbar-list-item {
+        font-size: 17px;
+    }
+    .navbar-list-item.nav-left.logo {
+        padding-top: 13px;
+    }
+    .navbar-list-item.nav-left .logo-icon {
+        display: inline-block;
+        height: 18px;
+    }
+    .navbar-list-item.title {
+        -webkit-flex: 2;
+        flex: 2;
+        text-align: center;
+        padding-top: 11px;
+    }
+    .navbar-list-item.title.home-title {
+        -webkit-flex: 2;
+        flex: 2;
+        text-align: center;
+    }
+    .navbar-list-item .back, .navbar-list-item .next {
+        width: 75px;
+    }
+    .home .action-container {
+        width: 380px;
+        padding: 30px 30px;
+    }
+    .pc-1 .catalog-nav-section {
+        width: 440px;
+    }
+    .small-screen-hide {
+        display: inline;
+    }
+}
+
+/* Small devices (tablets, 768px and up) @screen-sm-min */
+@media (min-width: 743px) and (min-height: 480px) {
+    .home .inner-content {
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+    .pc-1 .inner-content {
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+    .pc-1 .catalog-nav {
+        border-left: 1px solid #FFFFFF;
+        padding-left: 30px;
+    }
+    .pc-1 .catalog-nav li {
+        border: none;
+    }
+    .pc-1 .catalog-nav li:last-child {
+        border: none;
+    }
+    .pc-1 .catalog-nav .nav-link {
+        font-size: 16px;
+    }
+    .pc-1 .catalog-nav li:first-child .nav-link {
+        padding-top: 0;
+    }
+    .pc-1 .catalog-nav li:last-child .nav-link {
+        padding-bottom: 0;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) @screen-md-min */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) @screen-lg-min */
+@media (min-width: 1200px) {
+}

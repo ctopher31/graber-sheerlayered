@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html lang="en">
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="viewport-fit=cover, initial-scale=1, maximum-scale=1.5, minimum-scale=1, width=device-width">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src *; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="description" content="Graber Blinds - Overture Sheer Shades and Mezzanine Layered Shades Sample Book App.">
+        <title>Overture Sheer Shades and Mezzanine Layered Shades Sample Book App | Graber Blinds | Springs Window Fashions Middleton, WI</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body id="home">
+        <div class="app">
+            <div class="navbar">
+                <ul class="navbar-list list-inline">
+                    <li class="navbar-list-item nav-left logo"><img class="icon logo-icon" src="assets/images/icons/graber.svg" alt="Graber Logo"></li>
+                    <li class="navbar-list-item title home-title" href="index.html">Sheer And Layered Shades</li>
+                    <li class="navbar-list-item nav-right"><!--<img class="right-arrow" src="assets/images/icons/right-arrow.png" alt="Go back">Next--></li>
+                </ul>
+            </div>
+            <section class="content home">
+                <div class="vertical-bar"></div>
+                <div class="horizontal-bar"></div>
+                <div class="inner-content scrolling-container">
+                    <section class="action-section">
+                        <div class="action-inner-section">
+                            <article class="action-container">
+                                <div class="action-heading-container">
+                                    <h1>Revel</h1>
+                                    <span class="action-subhead">In Sheer Beauty</span>
+                                </div>
+                                <p class="garogier">Window treatments create an artistic impression&mdash;a whisper of luxury, a soft glow of sophistication&mdash;and subtly reshape the atmosphere of your home.</p>
+                                <p class="garogier">Where a refined aesthetic meets relaxed ambiance, you'll find Graber Overture Sheer Shades and Mezzanine Layered Shades. These exceptional window treatments gently finesse the light that streams into your home and compliment a broad spectrum of styles, from bold and modern to traditional and genteel. Exquisite and impeccably crafted, they create a look that is simply unparalleled.</p>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <div class="tabbar">
+                <ul class="tabbar-list list-inline">
+                    <li class="tabbar-list-item"><a class="nav-link text-center" href="index.html"><img class="svg-icon home-svg" src="assets/images/icons/home.svg" alt="Home"><br>Home</a></li>
+                    <li class="tabbar-list-item"><a class="nav-link text-center" href="product-catalog.html"><img class="svg-icon catalog-svg" src="assets/images/icons/catalog.svg" alt="Product Catalog"><br>Catalog</a></li>
+                    <li class="tabbar-list-item"><a class="nav-link text-center" href="collections.html"><img class="svg-icon collections-svg" src="assets/images/icons/collections.svg" alt="Collections"><br>Collections</a></li>
+                    <li class="tabbar-list-item"><a class="nav-link text-center" href="media.html"><img class="svg-icon media-svg" src="assets/images/icons/media.svg" alt="Media Library"><br>Media</a></li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/fastclick.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

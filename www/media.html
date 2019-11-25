@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html lang="en">
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="viewport-fit=cover, initial-scale=1, maximum-scale=1.5, minimum-scale=1, width=device-width">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src *; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="description" content="Product Catalog section of Graber Blinds - Sheer and Layered Shades Sample Book.">
+        <title>Media Library - Sheer and Layered Shades Sample Book | Graber Blinds | Middleton, WI</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/collections.css">
+        <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+    </head>
+    <body id="media">
+        <div class="app">
+            <div class="navbar">
+                <ul class="navbar-list list-inline">
+                    <li class="navbar-list-item nav-left logo"><img class="icon logo-icon" src="assets/images/icons/graber.svg" alt="Graber Logo"></li>
+                    <li class="navbar-list-item title media-title" href="index.html">Media Library</li>
+                    <li class="navbar-list-item nav-right menu">
+                        <a class="nav-link media-menu" href="#" title="Pop Out Menu"><!--<img class="svg-icon menu-svg" src="assets/images/icons/menu.svg" alt="Menu">-->Sort<br><img class="svg-icon arrow-icon down" src="assets/images/icons/down-arrow.svg" alt="Arrow icons for dropdown nav"></a>
+                    </li>
+                </ul>
+            </div>
+            <section class="content media">
+                <section class="filter-section">
+                    <div class="filter media-filter">
+                        <p>&#8213; Media Type &#8213;</p>
+                        <ul id="media-filter-list" class="media-filter-list list-inline" data-option-key="media-line">
+                            <li class="filter-item"><a class="nav-link" href="#images" data-option-value="Images">Images</a></li>
+                            <li class="filter-item"><a class="nav-link" href="#videos" data-option-value="Videos">Videos</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="inner-content scrolling-container">
+                    <section id="images" class="info-section image-section">
+                        <article class="info-container image-gallery">
+                            <div class="info-heading-container">
+                                <h2>Image Gallery</h2>
+                            </div>
+                            <div class="grid list-inline">
+                                <a class="grid-item" href="assets/images/detail-1.jpg" data-lightbox="room-scene-gallery" data-title="Layered Shades with Continuous-Loop Lift: Bernina, Shale 4602"><img class="img-responsive narrow-item" src="assets/images/detail-1.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-2.jpg" data-lightbox="room-scene-gallery" data-title="3&quot; Sheer Shades with Continuous-Loop Lift: Glessner, Portico 6101"><img class="img-responsive" src="assets/images/roomscene-2.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-3.jpg" data-lightbox="room-scene-gallery" data-title="3&quot; Sheer Shades with Motorized Lift: Glessner, Downtown 6124, 3&quot; Sheer Shades with Continuous-Loop Lift: Glessner Sheen, Bubbly 6161"><img class="img-responsive" src="assets/images/roomscene-3.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-4.jpg" data-lightbox="room-scene-gallery" data-title="Layered Shades with Motorized Lift: Vanoise, Kodak 4663; Drapery with Inverted Pleats: Channer, Lakeside 4761; 1&quot; Finesse Pole with Sphere Finials: Brushed Nickel 442"><img class="img-responsive" src="assets/images/roomscene-4.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/detail-5.jpg" data-lightbox="room-scene-gallery" data-title="Layered Shades with Continuous-Loop Lift: Cordillera, Rushes 4723"><img class="img-responsive narrow-item" src="assets/images/detail-5.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-5-1.jpg" data-lightbox="room-scene-gallery" data-title="Layered Shades with Continuous-Loop Lift: Cordillera, Rushes 4723"><img class="img-responsive" src="assets/images/roomscene-5-1.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-5-2.jpg" data-lightbox="room-scene-gallery" data-title="Layered Shades with Continuous-Loop Lift: Cordillera, Rushes 4723"><img class="img-responsive" src="assets/images/roomscene-5-2.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-6-1.jpg" data-lightbox="room-scene-gallery" data-title="Layered Shades with Continuous-Loop Lift: Glorieta, Cityscape 4542"><img class="img-responsive" src="assets/images/roomscene-6-1.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-6-2.jpg" data-lightbox="room-scene-gallery" data-title="Layered Shades with Continuous-Loop Lift: Glorieta, Cityscape 4542; Drapery with Wrapped Tabs: Taryn, Bittersweet 4502; 1&frac38;&quot; Opulence Smooth Pole with Kirtling Finials: Antique Gold 404"><img class="img-responsive" src="assets/images/roomscene-6-2.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-6-3.jpg" data-lightbox="room-scene-gallery" data-title="Layered Shades with Continuous-Loop Lift: Glorieta, Cityscape 4542; Drapery with Wrapped Tabs: Taryn, Bittersweet 4502; Casual Premium Fabric-Wrapped Cornice: Cozy, Bittersweet 256-31"><img class="img-responsive" src="assets/images/roomscene-6-3.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-7.jpg" data-lightbox="room-scene-gallery" data-title="2&quot; Sheer Shades with Motorized Lift: Marisco, Stationery 6201"><img class="img-responsive" src="assets/images/roomscene-7.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-8-1.jpg" data-lightbox="room-scene-gallery" data-title="Sheer Shades with Continuous-Loop Lift: Roslin, Sandstone 7245"><img class="img-responsive" src="assets/images/roomscene-8-1.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-8-2.jpg" data-lightbox="room-scene-gallery" data-title="Sheer Shades with Continuous-Loop Lift: Roslin, Sandstone 7245 and 5&frac12;&quot; Regal Wood Cornice with Keystone: Dark Walnut 1641"><img class="img-responsive" src="assets/images/roomscene-8-2.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-8-3.jpg" data-lightbox="room-scene-gallery" data-title="Sheer Shades with Continuous-Loop Lift: Roslin, Sandstone 7245 and 5&frac12;&quot; Regal Wood Cornice with Keystone: Dark Walnut 1641; Drapery with Back Tabs: Damani, Latte 4540; 1&frac38;&quot; Opulence Pole with Kirtling Finials: Regal Walnut 409"><img class="img-responsive" src="assets/images/roomscene-8-3.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-9-1.jpg" data-lightbox="room-scene-gallery" data-title="Layered Shades with Continuous-Loop Lift: Venado, Dusky Mauve 4644"><img class="img-responsive" src="assets/images/roomscene-9-1.jpg" alt="Custom Shutters"></a>
+                                <a class="grid-item" href="assets/images/roomscene-9-2.jpg" data-lightbox="room-scene-gallery" data-title="Layered Shades with Motorized Lift: Venado, Dusky Mauve 4644"><img class="img-responsive" src="assets/images/roomscene-9-2.jpg" alt="Custom Shutters"></a>
+                            </div>
+                        </article>
+                    </section>
+                    <section id="videos" class="info-section video-section">
+                        <article class="info-container video-gallery">
+                            <div class="info-heading-container">
+                                <h2>Videos</h2>
+                                <!--<div class="video-note">&ast; Requires a wireless connection &ast;</div>-->
+                            </div>
+                            <div class="video-grid">
+                                <div class="video-grid-item">
+                                    <div id="play-sheer-layered" class="play-button-container">
+                                        <img class="play-button" src="assets/images/icons/play-alt2.svg" alt="Play the video">
+                                    </div>
+                                    <div class="video-container">
+                                        <video id="sheer-layered-video" class="video" controls poster="assets/images/video-poster.jpg">
+                                            <source src="assets/videos/Sheer_Layered-1280x720-v5.mp4" type='video/mp4'>
+                                        </video>
+                                    </div>
+                                </div>
+                                <div class="video-grid-item">
+                                    <div id="play-3-shot" class="play-button-container">
+                                        <img class="play-button" src="assets/images/icons/play-alt2.svg" alt="Play the video">
+                                    </div>
+                                    <div class="video-container">
+                                        <video id="3-shot-video" class="video" controls   poster="assets/images/cgi-poster.jpg">
+                                            <source src="assets/videos/SWF_3D_Shading_STATIC_001_1280x720.mp4" type='video/mp4'>
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </section>
+            </section>
+            <div class="tabbar">
+                <ul class="tabbar-list list-inline">
+                    <li class="tabbar-list-item"><a class="nav-link text-center" href="index.html"><img class="svg-icon home-svg" src="assets/images/icons/home.svg" alt="Home"><br>Home</a></li>
+                    <li class="tabbar-list-item"><a class="nav-link text-center" href="product-catalog.html"><img class="svg-icon catalog-svg" src="assets/images/icons/catalog.svg" alt="Product Catalog"><br>Catalog</a></li>
+                    <li class="tabbar-list-item"><a class="nav-link text-center" href="collections.html"><img class="svg-icon collections-svg" src="assets/images/icons/collections.svg" alt="Collections"><br>Collections</a></li>
+                    <li class="tabbar-list-item"><a class="nav-link text-center" href="media.html"><img class="svg-icon media-svg" src="assets/images/icons/media.svg" alt="Media Library"><br>Media</a></li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/fastclick.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/lightbox.min.js"></script>
+    </body>
+</html>
